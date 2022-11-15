@@ -39,7 +39,7 @@ public class Bank {
 
         do {
             System.out.print("\n Your Option : ");
-            chooseOption = input.next().charAt(0);
+            chooseOption = input.next().toUpperCase().charAt(0);
 
             switch (chooseOption) {
                 case 'A':

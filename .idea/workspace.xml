@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a56923b-a02c-490e-9f14-3eb210532da4" name="Changes" comment="Commited">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2a56923b-a02c-490e-9f14-3eb210532da4" name="Changes" comment="New Loan Section">
       <change beforePath="$PROJECT_DIR$/src/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BankingApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BankingApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoanSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoanSection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668482594840</updated>
       <workItem from="1668482596934" duration="4222000" />
-      <workItem from="1668503922705" duration="9027000" />
+      <workItem from="1668503922705" duration="9402000" />
     </task>
     <task id="LOCAL-00001" summary="Commited">
       <created>1668483254544</created>
@@ -141,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668483254544</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="New Loan Section">
+      <created>1668535982327</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668535982327</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,18 +164,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commited" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Bank.java</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="New Loan Section" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Loan Section" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BankApplication$LoanSectionTest_testTimePeriodLower.ic" NAME="LoanSectionTest.testTimePeriodLower Coverage Results" MODIFIED="1668503517002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -10,7 +10,7 @@ public class LoanSection {
         System.out.println("E : Exit the banking Application");
         do {
             System.out.print("\n Enter Your Choice : ");
-            userInput = input.next().charAt(0);
+            userInput = input.next().toUpperCase().charAt(0);
             System.out.println("\n");
 
             switch (userInput) {
@@ -29,12 +29,7 @@ public class LoanSection {
         System.out.println("Thank You For Banking With Us");
     }
 
-    public void calculateMonthlyPayment(int timePeriod, double loanAmount, double interestRate) {
-        double interest = (loanAmount * timePeriod * (interestRate / 12)) / 100;
-        double capitalAmount = loanAmount + interest;
-        double monthlyPayment = capitalAmount / timePeriod;
-        System.out.println("The Monthly Payment of Your requested loan Amount is : " + monthlyPayment);
-    }
+
     public void showRatesAndTimePeriods(){
         System.out.println("\n");
         System.out.println(" -------------------------------------------------------------------   ");
@@ -45,6 +40,13 @@ public class LoanSection {
         System.out.println("|  More Than 7      |                   |           12%             |"  );
         System.out.println(" -------------------------------------------------------------------   ");
         System.out.println("\n");
+    }
+
+    public void calculateMonthlyPayment(int timePeriod, double loanAmount, double interestRate) {
+        double interest = (loanAmount * timePeriod * (interestRate / 12)) / 100;
+        double capitalAmount = loanAmount + interest;
+        double monthlyPayment = capitalAmount / timePeriod;
+        System.out.println("The Monthly Payment of Your requested loan Amount is : " + monthlyPayment);
     }
 
     public void loanCalculator() {
