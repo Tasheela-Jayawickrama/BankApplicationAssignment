@@ -2,25 +2,26 @@ import java.util.Scanner;
 
 public class Bank {
     private double currentBalance;
-    private double interestAmount;
 
     public double depositMoney(double amount) {
         if (amount != 0) {
-            currentBalance -= interestAmount;
             currentBalance += amount;
         }
         return amount;
     }
 
-    public void withdrawMoney(double amount) {
-        if (amount != 0) {
-            currentBalance -= amount;
-        }
+    public double withdrawMoney(double amount) {
+            if (amount < currentBalance) {
+                currentBalance -= amount;
+            }else {
+                System.out.println(" You Don't have Sufficient Balance to Withdraw..\n Please Check Your Account Balance First");
+            }
+        return amount;
     }
 
     public double accountBalance() {
         double accountInterestRate = 0.35;
-        interestAmount = (currentBalance * accountInterestRate) / 100;
+        double interestAmount = (currentBalance * accountInterestRate) / 100;
         currentBalance += interestAmount;
         return currentBalance;
     }
@@ -46,12 +47,12 @@ public class Bank {
                     break;
                 case 'B':
                     System.out.print("Enter The Amount You Want to Deposit : ");
-                    int depositAmount = input.nextInt();
+                    double depositAmount = input.nextDouble();
                     depositMoney(depositAmount);
                     break;
                 case 'C':
                     System.out.print("Enter The Amount You Want to WithDraw : ");
-                    int withdrawAmount = input.nextInt();
+                    double withdrawAmount = input.nextDouble();
                     withdrawMoney(withdrawAmount);
                     break;
                 case 'D':

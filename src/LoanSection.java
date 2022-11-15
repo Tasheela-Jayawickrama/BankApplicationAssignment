@@ -2,21 +2,12 @@ import java.util.Scanner;
 
 public class LoanSection {
     Scanner input = new Scanner(System.in);
-    int loanMonthInput;
-    double loanAmountInput;
-    double interestRate;
-    double loanInterestAmount;
-    double netLoanAmount;
-    double capitalAmount;
-    double monthlyPaymentAmount;
 
     public void loanSectionPage() {
         char userInput = '\0';
         Scanner input = new Scanner(System.in);
         System.out.println("A : Loan Calculator");
         System.out.println("E : Exit the banking Application");
-
-
         do {
             System.out.print("\n Enter Your Choice : ");
             userInput = input.next().charAt(0);
@@ -38,34 +29,48 @@ public class LoanSection {
         System.out.println("Thank You For Banking With Us");
     }
 
-    public void loanCalculator() {
-        System.out.print("Enter the time period ( In Months )  : ");
-        loanMonthInput = input.nextInt();
-        if (loanMonthInput < 36){
-            System.out.println("The Time Period Must Be Greater The 36 Months ");
-        }
-        if (loanMonthInput == 36) {
-            interestRate = 5.0/12;
-            getInterest();
-        } if (loanMonthInput == 60){
-            interestRate = 7.5/12;
-            getInterest();
-        } if (loanMonthInput == 84){
-            interestRate = 10.0/12;
-            getInterest();
-        } if (loanMonthInput > 84){
-            interestRate = 12.5/12;
-            getInterest();
-        }
+    public void calculateMonthlyPayment(int timePeriod, double loanAmount, double interestRate) {
+        double interest = (loanAmount * timePeriod * (interestRate / 12)) / 100;
+        double capitalAmount = loanAmount + interest;
+        double monthlyPayment = capitalAmount / timePeriod;
+        System.out.println("The Monthly Payment of Your requested loan Amount is : " + monthlyPayment);
+    }
+    public void showRatesAndTimePeriods(){
+        System.out.println("\n");
+        System.out.println(" -------------------------------------------------------------------   ");
+        System.out.println("|       Years       |       Months      |       Interest Rate       |"  );
+        System.out.println("|         3         |         36        |           5%              |"  );
+        System.out.println("|         5         |         60        |           7.5%            |"  );
+        System.out.println("|         7         |         84        |           10.5%           |"  );
+        System.out.println("|  More Than 7      |                   |           12%             |"  );
+        System.out.println(" -------------------------------------------------------------------   ");
+        System.out.println("\n");
     }
 
-    public void getInterest(){
-        System.out.print("Enter the amount of loans ( In Rupees ): ");
-        loanAmountInput = input.nextDouble();
-        loanInterestAmount = (loanAmountInput * interestRate * loanMonthInput ) / 100;
-        netLoanAmount = loanAmountInput + loanInterestAmount;
-        capitalAmount = loanAmountInput / loanMonthInput;
-        monthlyPaymentAmount = netLoanAmount / loanMonthInput;
-        System.out.println("Monthly Repayment Of the Loan is : " + monthlyPaymentAmount);
+    public void loanCalculator() {
+        int timePeriod;
+        double loanAmount;
+        showRatesAndTimePeriods();
+        System.out.print("Enter the loan amount you wish : ");
+        loanAmount = input.nextDouble();
+        System.out.print("Enter the Time period (In Months) : ");
+        timePeriod = input.nextInt();
+        if (timePeriod < 36) {
+            System.out.println("You Are Not Eligible For A Loan");
+        }
+        if (timePeriod == 36) {
+            calculateMonthlyPayment(timePeriod, loanAmount, 5);
+        }
+        if (timePeriod == 60) {
+            calculateMonthlyPayment(timePeriod, loanAmount, 7.5);
+        }
+        if (timePeriod == 84) {
+            calculateMonthlyPayment(timePeriod, loanAmount, 10.5);
+        }
+        if (timePeriod > 84) {
+            calculateMonthlyPayment(timePeriod, loanAmount, 12);
+        } else {
+            System.out.println("Input Valid TimePeriod and LoanAmount");
+        }
     }
 }

@@ -11,7 +11,7 @@ public class BankingApplication {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter Your User Name : ");
         customerName = input.nextLine();
-        System.out.print("Enter Your Password : ");
+        System.out.print("Enter Your ID- : ");
         customerID = input.nextLine();
 
         System.out.println("\n-------------------------------------------");
