@@ -37,16 +37,17 @@ public class LoanSection {
         System.out.println("|         3         |         36        |           5%              |"  );
         System.out.println("|         5         |         60        |           7.5%            |"  );
         System.out.println("|         7         |         84        |           10.5%           |"  );
-        System.out.println("|  More Than 7      |                   |           12%             |"  );
+        System.out.println("|    More Than 7    |                   |           12%             |"  );
         System.out.println(" -------------------------------------------------------------------   ");
         System.out.println("\n");
     }
 
     public void calculateMonthlyPayment(int timePeriod, double loanAmount, double interestRate) {
+        double monthlyPayment;
         double interest = (loanAmount * timePeriod * (interestRate / 12)) / 100;
         double capitalAmount = loanAmount + interest;
-        double monthlyPayment = capitalAmount / timePeriod;
-        System.out.println("The Monthly Payment of Your requested loan Amount is : " + monthlyPayment);
+        monthlyPayment = capitalAmount / timePeriod;
+        System.out.println("The monthly payment is " + monthlyPayment);
     }
 
     public void loanCalculator() {
@@ -71,8 +72,6 @@ public class LoanSection {
         }
         if (timePeriod > 84) {
             calculateMonthlyPayment(timePeriod, loanAmount, 12);
-        } else {
-            System.out.println("Input Valid TimePeriod and LoanAmount");
         }
     }
 }

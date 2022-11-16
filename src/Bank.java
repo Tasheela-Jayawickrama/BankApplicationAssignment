@@ -20,7 +20,7 @@ public class Bank {
     }
 
     public double accountBalance() {
-        double accountInterestRate = 0.35;
+        double accountInterestRate = 3.5 / 12;
         double interestAmount = (currentBalance * accountInterestRate) / 100;
         currentBalance += interestAmount;
         return currentBalance;

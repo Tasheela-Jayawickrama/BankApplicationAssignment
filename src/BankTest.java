@@ -10,10 +10,4 @@ class BankTest {
         assertEquals(1000, bank.depositMoney(1000));
     }
 
-    @Test
-    void testWithdrawMoney() {
-        Bank bank = new Bank();
-        assertEquals(500, bank.withdrawMoney(500));
-    }
-
 }
