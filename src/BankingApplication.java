@@ -19,8 +19,9 @@ public class BankingApplication {
 
         System.out.println("A: For Customer Service Section ");
         System.out.println("B: For Loan Section ");
+
         System.out.print("\n Enter Your Choice : ");
-        userIdea = input.next().charAt(0);
+        userIdea = input.next().toUpperCase().charAt(0);
         System.out.println("\n");
 
 

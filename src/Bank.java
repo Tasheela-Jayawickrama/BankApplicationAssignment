@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Bank {
-    private double currentBalance;
+    double currentBalance;
+    double accountInterestRate;
 
     public double depositMoney(double amount) {
         if (amount != 0) {
@@ -19,8 +20,8 @@ public class Bank {
         return amount;
     }
 
-    public double accountBalance() {
-        double accountInterestRate = 3.5 / 12;
+    public double accountBalance(double currentBalance,double accountInterestRate) {
+        accountInterestRate = 3.5 / 12;
         double interestAmount = (currentBalance * accountInterestRate) / 100;
         currentBalance += interestAmount;
         return currentBalance;
@@ -43,7 +44,7 @@ public class Bank {
 
             switch (chooseOption) {
                 case 'A':
-                    System.out.println("Your Current Account Balance : " + accountBalance());
+                    System.out.println("Your Current Account Balance : " + accountBalance(currentBalance,accountInterestRate));
                     break;
                 case 'B':
                     System.out.print("Enter The Amount You Want to Deposit : ");
