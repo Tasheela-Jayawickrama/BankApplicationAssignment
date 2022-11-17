@@ -47,7 +47,7 @@ public class LoanSection {
         double interest = (loanAmount * timePeriod * (interestRate / 12)) / 100;
         double capitalAmount = loanAmount + interest;
         monthlyPayment = capitalAmount / timePeriod;
-        System.out.println("The monthly payment is : "+ monthlyPayment);
+        System.out.println("The monthly payment is : Rs."+ Math.round(monthlyPayment));
         return monthlyPayment;
     }
 
@@ -55,7 +55,7 @@ public class LoanSection {
         int timePeriod;
         double loanAmount;
         showRatesAndTimePeriods();
-        System.out.print("Enter the loan amount you wish : ");
+        System.out.print("Enter the loan amount you wish : Rs.");
         loanAmount = input.nextDouble();
         System.out.print("Enter the Time period (In Months) : ");
         timePeriod = input.nextInt();

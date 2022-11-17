@@ -44,17 +44,17 @@ public class Bank {
 
             switch (chooseOption) {
                 case 'A':
-                    System.out.println("Your Current Account Balance : " + accountBalance(currentBalance,accountInterestRate));
+                    System.out.println("Your Current Account Balance : Rs." + Math.round(accountBalance(currentBalance,accountInterestRate)));
                     break;
                 case 'B':
-                    System.out.print("Enter The Amount You Want to Deposit : ");
+                    System.out.print("Enter The Amount You Want to Deposit : Rs.");
                     double depositAmount = input.nextDouble();
-                    depositMoney(depositAmount);
+                    Math.round(depositMoney(depositAmount));
                     break;
                 case 'C':
-                    System.out.print("Enter The Amount You Want to WithDraw : ");
+                    System.out.print("Enter The Amount You Want to WithDraw : Rs.");
                     double withdrawAmount = input.nextDouble();
-                    withdrawMoney(withdrawAmount);
+                    Math.round(withdrawMoney(withdrawAmount));
                     break;
                 case 'D':
                     System.out.println("Exiting the Application");
