@@ -52,13 +52,11 @@ public class LoanSection {
     }
 
     public void loanCalculator() {
-        int timePeriod;
-        double loanAmount;
         showRatesAndTimePeriods();
         System.out.print("Enter the loan amount you wish : Rs.");
-        loanAmount = input.nextDouble();
+        double loanAmount = input.nextDouble();
         System.out.print("Enter the Time period (In Months) : ");
-        timePeriod = input.nextInt();
+        int timePeriod = input.nextInt();
         if (timePeriod < 36) {
             System.out.println("You Are Not Eligible For A Loan");
         }

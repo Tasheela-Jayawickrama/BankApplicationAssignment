@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a56923b-a02c-490e-9f14-3eb210532da4" name="Changes" comment="Testing classes Added">
+    <list default="true" id="2a56923b-a02c-490e-9f14-3eb210532da4" name="Changes" comment="Add Math.Round">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoanSection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoanSection.java" afterDir="false" />
     </list>
@@ -9,6 +9,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ComposerSettings">
     <execution />
@@ -38,25 +41,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Works/BankApplicationAssignment/BankApplication&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -65,7 +59,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BankingApplication">
+  <component name="RunManager" selected="JUnit.BankTest">
     <configuration name="BankingApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BankingApplication" />
       <module name="BankApplication" />
@@ -92,12 +86,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BankTest.testDepositMoney" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoanSectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="BankApplication" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BankTest" />
-      <option name="METHOD_NAME" value="testDepositMoney" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="LoanSectionTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -114,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.BankingApplication" />
-        <item itemvalue="JUnit.LoanSectionTest.testLoanMonthlyRepayment" />
         <item itemvalue="JUnit.BankTest" />
+        <item itemvalue="JUnit.LoanSectionTest" />
+        <item itemvalue="JUnit.LoanSectionTest.testLoanMonthlyRepayment" />
+        <item itemvalue="Application.BankingApplication" />
         <item itemvalue="JUnit.BankTest.testAccountWithInterest" />
-        <item itemvalue="JUnit.BankTest.testDepositMoney" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +130,11 @@
       <workItem from="1668601038919" duration="599000" />
       <workItem from="1668650521501" duration="639000" />
       <workItem from="1668655112396" duration="653000" />
-      <workItem from="1668695178658" duration="123000" />
+      <workItem from="1668695178658" duration="905000" />
+      <workItem from="1668708066799" duration="61000" />
+      <workItem from="1668708424217" duration="1532000" />
+      <workItem from="1668710214200" duration="159000" />
+      <workItem from="1668737345927" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="Commited">
       <created>1668483254544</created>
@@ -167,7 +164,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668573209905</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add Math.Round">
+      <created>1668695483068</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668695483068</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,12 +187,18 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commited" />
     <MESSAGE value="New Loan Section" />
     <MESSAGE value="Testing classes Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing classes Added" />
+    <MESSAGE value="Add Math.Round" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Math.Round" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BankApplication$LoanSectionTest_testTimePeriodLower.ic" NAME="LoanSectionTest.testTimePeriodLower Coverage Results" MODIFIED="1668503517002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
