@@ -27,7 +27,7 @@ public class Bank {
         return currentBalance;
     }
 
-    public void welcomePage() {
+    public double welcomePage(double v) {
         char chooseOption = '\0';
         Scanner input = new Scanner(System.in);
         System.out.println("     ----------------------------------- ");
@@ -65,5 +65,6 @@ public class Bank {
 
         } while (chooseOption != 'D');
         System.out.println("Thank You For Banking With Us");
+        return v;
     }
 }

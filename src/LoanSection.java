@@ -29,25 +29,24 @@ public class LoanSection {
     }
 
 
-    public void showRatesAndTimePeriods(){
+    public void showRatesAndTimePeriods() {
         System.out.println(" ------------------------ Loan Calculator --------------------------   ");
         System.out.println("\n");
         System.out.println(" -------------------------------------------------------------------   ");
-        System.out.println("|       Years       |       Months      |       Interest Rate       |"  );
-        System.out.println("|         3         |         36        |           5%              |"  );
-        System.out.println("|         5         |         60        |           7.5%            |"  );
-        System.out.println("|         7         |         84        |           10.5%           |"  );
-        System.out.println("|            More Than 7 Years          |           12%             |"  );
+        System.out.println("|       Years       |       Months      |       Interest Rate       |");
+        System.out.println("|         3         |         36        |           5%              |");
+        System.out.println("|         5         |         60        |           7.5%            |");
+        System.out.println("|         7         |         84        |           10.5%           |");
+        System.out.println("|            More Than 7 Years          |           12%             |");
         System.out.println(" -------------------------------------------------------------------   ");
         System.out.println("\n");
     }
 
     public double calculateMonthlyPayment(int timePeriod, double loanAmount, double interestRate) {
-        double monthlyPayment;
         double interest = (loanAmount * timePeriod * (interestRate / 12)) / 100;
-        double capitalAmount = loanAmount + interest;
-        monthlyPayment = capitalAmount / timePeriod;
-        System.out.println("The monthly payment is : Rs."+ Math.round(monthlyPayment));
+        double fullPayment = loanAmount + interest;
+        double monthlyPayment = fullPayment / timePeriod;
+        System.out.println("The monthly payment is : Rs." + Math.round(monthlyPayment));
         return monthlyPayment;
     }
 

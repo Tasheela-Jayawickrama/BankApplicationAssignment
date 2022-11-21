@@ -7,6 +7,7 @@ public class BankingApplication {
         String customerName;
         String customerID;
 
+
         char userIdea = '\0';
         Scanner input = new Scanner(System.in);
         System.out.print("Enter Your User Name : ");
@@ -28,7 +29,7 @@ public class BankingApplication {
         switch (userIdea) {
             case 'A':
                 Bank bank = new Bank();
-                bank.welcomePage();
+                bank.welcomePage(bank.withdrawMoney(1000));
                 break;
             case 'B':
                 LoanSection loansection = new LoanSection();
